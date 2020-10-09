@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="385.0" prefWidth="853.0" style="-fx-border-color: #000000;-fx-background-color: #D7D6D6" xmlns="http://javafx.com/javafx/8.0.261" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainScreenController">
+    <children>
+        <TableView fx:id="partsTableView" layoutX="14.0" layoutY="113.0" prefHeight="175.0" prefWidth="400.0" style="-fx-border-color: #000000; -fx-border-radius: 5;">
+            <columns>
+                <TableColumn fx:id="partsIDColumn" prefWidth="100.0" text="Part ID" />
+                <TableColumn fx:id="partsNameColumn" prefWidth="100.0" text="Part Name" />
+                <TableColumn fx:id="partsInventoryColumn" prefWidth="100.0" text="Inventory Level" />
+                <TableColumn fx:id="partsPriceColumn" prefWidth="100.0" text="Price per Unit" />
+            </columns>
+        </TableView>
+        <TableView fx:id="productsTableView" layoutX="436.0" layoutY="113.0" prefHeight="175.0" prefWidth="400.0" style="-fx-border-color: #000000; -fx-border-radius: 5;">
+            <columns>
+                <TableColumn fx:id="productsIDColumn" prefWidth="100.0" text="Product ID" />
+                <TableColumn fx:id="productsNameColumn" prefWidth="100.0" text="Product Name" />
+                <TableColumn fx:id="productsInventoryColumn" prefWidth="100.0" text="Inventory Level" />
+                <TableColumn fx:id="productsPriceColumn" prefWidth="100.0" text="Price per Unit" />
+            </columns>
+        </TableView>
+        <Label fx:id="LabelParts" layoutX="14.0" layoutY="78.0" text="Parts">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="LabelProducts" layoutX="436.0" layoutY="78.0" text="Products">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="LabelMainScreen" layoutX="37.0" layoutY="21.0" text="Inventory Management System">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Button fx:id="ButtonSearchParts" layoutX="150.0" layoutY="81.0" mnemonicParsing="false" onAction="#partsSearch" prefHeight="25.0" prefWidth="52.0" text="Search" />
+        <TextField fx:id="searchPartsTextField" layoutX="215.0" layoutY="82.0" prefHeight="25.0" prefWidth="200.0" promptText="Search" />
+        <Button fx:id="ButtonSearchProducts" layoutX="569.0" layoutY="81.0" mnemonicParsing="false" onAction="#mainProductsSearch" text="Search" />
+        <TextField fx:id="searchProductsTextField" layoutX="636.0" layoutY="82.0" prefHeight="25.0" prefWidth="200.0" promptText="Search" />
+        <Button fx:id="ButtonAddParts" layoutX="214.0" layoutY="298.0" mnemonicParsing="false" onAction="#addPartScreen" prefHeight="25.0" prefWidth="60.0" text="Add" />
+        <Button fx:id="ButtonModifyParts" layoutX="285.0" layoutY="298.0" mnemonicParsing="false" onAction="#modifyPartScreen" prefHeight="25.0" prefWidth="60.0" text="Modify" />
+        <Button fx:id="ButtonDeleteParts" layoutX="354.0" layoutY="298.0" mnemonicParsing="false" onAction="#mainPartsDelete" prefHeight="25.0" prefWidth="60.0" text="Delete" />
+        <Button fx:id="ButtonAddProducts" layoutX="636.0" layoutY="298.0" mnemonicParsing="false" onAction="#addProductScreen" prefHeight="25.0" prefWidth="60.0" text="Add" />
+        <Button fx:id="ButtonModifyProducts" layoutX="706.0" layoutY="298.0" mnemonicParsing="false" onAction="#modifyProductScreen" prefHeight="25.0" prefWidth="60.0" text="Modify" />
+        <Button fx:id="ButtonDeleteProducts" layoutX="776.0" layoutY="298.0" mnemonicParsing="false" onAction="#mainProductsDelete" prefHeight="25.0" prefWidth="60.0" text="Delete" />
+        <Button fx:id="ButtonExit" layoutX="760.0" layoutY="337.0" mnemonicParsing="false" onAction="#mainExitButton" prefHeight="35.0" prefWidth="75.0" text="Exit" />
+    </children>
+</AnchorPane>
